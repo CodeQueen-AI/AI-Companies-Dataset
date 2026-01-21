@@ -33,25 +33,22 @@ df.fillna("Unknown", inplace=True)
 # ------------------------------------------Data Visualization----------------------------------------------
 
 # # Plot 1: Companies by Employee Size
-plt.figure()
-sns.countplot(y="Number of Employees", data=df, color="purple" )
-plt.title("AI Companies by Number of Employees")
-plt.xlabel("Count")
-plt.ylabel("Employee Range")
-plt.show()
+# plt.figure()
+# sns.countplot(y="Number of Employees", data=df, color="purple" )
+# plt.title("AI Companies by Number of Employees")
+# plt.xlabel("Count")
+# plt.ylabel("Employee Range")
+# plt.show()
 
-
-# # Plot 2: Companies by Location (Top 10)
-# plt.figure(figsize=(8,5))
-# sns.countplot(
-#     y="Location",
-#     data=df,
-#     order=df["Location"].value_counts().head(10).index
-# )
-# plt.title("Top 10 Locations with AI Companies")
+# Plot 2: Companies by Location (Top 10)
+# plt.figure(figsize=(10,6)) 
+# sns.countplot(y="Location",data=df,order=df["Location"].value_counts().head(10).index,color="orange")
+# plt.title("Top 10 Locations with AI Companies", fontsize=14, fontweight='bold')
 # plt.xlabel("Count")
 # plt.ylabel("Location")
+# plt.tight_layout() 
 # plt.show()
+
 
 # # Plot 3: AI Service Focus Distribution
 # plt.figure()
