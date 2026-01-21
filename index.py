@@ -33,47 +33,43 @@ df.fillna("Unknown", inplace=True)
 
 # ------------------------------------------Data Visualization----------------------------------------------
 
-# # Plot 1: Companies by Employee Size
-# plt.figure()
-# sns.countplot(y="Number of Employees", data=df, color="purple" )
-# plt.title("AI Companies by Number of Employees")
-# plt.xlabel("Count")
-# plt.ylabel("Employee Range")
-# plt.show()
+# Plot 1: Companies by Employee Size
+plt.figure()
+sns.countplot(y="Number of Employees", data=df, color="purple" )
+plt.title("AI Companies by Number of Employees")
+plt.xlabel("Count")
+plt.ylabel("Employee Range")
+plt.show()
 
 # Plot 2: Companies by Location (Top 10)
-# plt.figure(figsize=(10,6)) 
-# sns.countplot(y="Location",data=df,order=df["Location"].value_counts().head(10).index,color="orange")
-# plt.title("Top 10 Locations with AI Companies", fontsize=14, fontweight='bold')
-# plt.xlabel("Count")
-# plt.ylabel("Location")
-# plt.tight_layout() 
-# plt.show()
+plt.figure(figsize=(10,6)) 
+sns.countplot(y="Location",data=df,order=df["Location"].value_counts().head(10).index,color="orange")
+plt.title("Top 10 Locations with AI Companies", fontsize=14, fontweight='bold')
+plt.xlabel("Count")
+plt.ylabel("Location")
+plt.tight_layout() 
+plt.show()
 
 # Plot 3: AI Service Focus Distribution
-# plt.figure(figsize=(10,6)) 
-# sns.countplot(y="Percent AI Service Focus",data=df,color="green")
-# plt.title("AI Service Focus Distribution", fontsize=14, fontweight='bold')
-# plt.xlabel("Count")
-# plt.ylabel("AI Service Focus (%)")
-# plt.tight_layout()  
-# plt.show()
+plt.figure(figsize=(10,6)) 
+sns.countplot(y="Percent AI Service Focus",data=df,color="green")
+plt.title("AI Service Focus Distribution", fontsize=14, fontweight='bold')
+plt.xlabel("Count")
+plt.ylabel("AI Service Focus (%)")
+plt.tight_layout()  
+plt.show()
 
 # Plot 4: Average Hourly Rate Distribution
-# plt.figure()
-# sns.histplot(df["Average Hourly Rate"] , color='blue')
-# plt.title("Average Hourly Rate Distribution")
-# plt.xlabel("Hourly Rate")
-# plt.ylabel("Frequency")
-# plt.show()
+plt.figure()
+sns.histplot(df["Average Hourly Rate"] , color='blue')
+plt.title("Average Hourly Rate Distribution")
+plt.xlabel("Hourly Rate")
+plt.ylabel("Frequency")
+plt.show()
 
 # Plot 5: Project Size vs Employees
 plt.figure()
-sns.countplot(
-    x="Minimum Project Size",
-    hue="Number of Employees",
-    data=df
-)
+sns.countplot(x="Minimum Project Size",hue="Number of Employees",data=df)
 plt.title("Project Size vs Employee Count")
 plt.xlabel("Minimum Project Size")
 plt.ylabel("Count")
