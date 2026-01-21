@@ -75,22 +75,17 @@ plt.xlabel("Minimum Project Size")
 plt.ylabel("Count")
 plt.show()
 
-# # ===============================
-# # -------- NUMPY ANALYSIS --------
-# # ===============================
-# employee_counts = df["Number of Employees"].value_counts().values
+# -------------------------------------Numpy Analysis------------------------------------------------------
+employee_counts = df["Number of Employees"].value_counts().values
+print("\n--- Employee Distribution Stats ---")
+print("Max Companies in a Category:", np.max(employee_counts))
+print("Min Companies in a Category:", np.min(employee_counts))
+print("Average Companies:", np.mean(employee_counts))
 
-# print("\n--- Employee Distribution Stats ---")
-# print("Max Companies in a Category:", np.max(employee_counts))
-# print("Min Companies in a Category:", np.min(employee_counts))
-# print("Average Companies:", np.mean(employee_counts))
-
-# # ===============================
-# # Final Insights
-# # ===============================
-# print("\n--- Key Insights from EDA ---")
-# print("• Most AI companies are small to mid-sized")
-# print("• AI companies are concentrated in specific locations")
-# print("• Many firms focus partially on AI services")
-# print("• Pricing and project size vary widely")
-# print("• AI service industry is diverse and growing")
+# ------------------------------------------Key Insights from EDA------------------------------------------
+print("\n--- Key Insights from EDA ---")
+print("• Most AI companies are small to mid-sized")
+print("• AI companies are concentrated in specific locations")
+print("• Many firms focus partially on AI services")
+print("• Pricing and project size vary widely")
+print("• AI service industry is diverse and growing")
