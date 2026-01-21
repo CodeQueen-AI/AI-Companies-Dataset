@@ -4,7 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-sns.set_theme(style="whitegrid")
+sns.set_theme(style="darkgrid")       
+plt.style.use('dark_background')        
 
 # --------------------------------------------- Data Analysis----------------------------------------------
 # Load Dataset
@@ -66,17 +67,17 @@ df.fillna("Unknown", inplace=True)
 # plt.ylabel("Frequency")
 # plt.show()
 
-# # Plot 5: Project Size vs Employees
-# plt.figure()
-# sns.countplot(
-#     x="Minimum Project Size",
-#     hue="Number of Employees",
-#     data=df
-# )
-# plt.title("Project Size vs Employee Count")
-# plt.xlabel("Minimum Project Size")
-# plt.ylabel("Count")
-# plt.show()
+# Plot 5: Project Size vs Employees
+plt.figure()
+sns.countplot(
+    x="Minimum Project Size",
+    hue="Number of Employees",
+    data=df
+)
+plt.title("Project Size vs Employee Count")
+plt.xlabel("Minimum Project Size")
+plt.ylabel("Count")
+plt.show()
 
 # # ===============================
 # # -------- NUMPY ANALYSIS --------
