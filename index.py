@@ -49,18 +49,18 @@ df.fillna("Unknown", inplace=True)
 # plt.tight_layout() 
 # plt.show()
 
-
-# # Plot 3: AI Service Focus Distribution
-# plt.figure()
-# sns.countplot(y="Percent AI Service Focus", data=df)
-# plt.title("AI Service Focus Distribution")
+# Plot 3: AI Service Focus Distribution
+# plt.figure(figsize=(10,6)) 
+# sns.countplot(y="Percent AI Service Focus",data=df,color="green")
+# plt.title("AI Service Focus Distribution", fontsize=14, fontweight='bold')
 # plt.xlabel("Count")
 # plt.ylabel("AI Service Focus (%)")
+# plt.tight_layout()  
 # plt.show()
 
-# # Plot 4: Average Hourly Rate Distribution
+# Plot 4: Average Hourly Rate Distribution
 # plt.figure()
-# sns.histplot(df["Average Hourly Rate"])
+# sns.histplot(df["Average Hourly Rate"] , color='blue')
 # plt.title("Average Hourly Rate Distribution")
 # plt.xlabel("Hourly Rate")
 # plt.ylabel("Frequency")
