@@ -29,7 +29,7 @@ df.drop(columns=["Unnamed: 7"], inplace=True)
 df.fillna("Unknown", inplace=True)
 
 # Save All Plots 
-output_folder = "plots_images"
+output_folder = "Plot Images"
 os.makedirs(output_folder, exist_ok=True)
 
 def save_plot(fig, filename):
@@ -42,7 +42,7 @@ sns.countplot(y="Number of Employees", data=df, color="purple")
 plt.title("AI Companies by Number of Employees")
 plt.xlabel("Count")
 plt.ylabel("Employee Range")
-save_plot(fig, "plot1_employee_size.png")
+save_plot(fig, "Plot1.png")
 plt.show()
 
 # Plot 2: Companies by Location (Top 10)
@@ -56,7 +56,7 @@ sns.countplot(
 plt.title("Top 10 Locations with AI Companies", fontsize=14, fontweight='bold')
 plt.xlabel("Count")
 plt.ylabel("Location")
-save_plot(fig, "plot2_location.png")
+save_plot(fig, "Plot2.png")
 plt.show()
 
 # Plot 3: AI Service Focus Distribution
@@ -65,7 +65,7 @@ sns.countplot(y="Percent AI Service Focus", data=df, color="green")
 plt.title("AI Service Focus Distribution", fontsize=14, fontweight='bold')
 plt.xlabel("Count")
 plt.ylabel("AI Service Focus (%)")
-save_plot(fig, "plot3_service_focus.png")
+save_plot(fig, "Plot3.png")
 plt.show()
 
 # Plot 4: Average Hourly Rate Distribution
@@ -74,7 +74,7 @@ sns.histplot(df["Average Hourly Rate"], color='blue')
 plt.title("Average Hourly Rate Distribution")
 plt.xlabel("Hourly Rate")
 plt.ylabel("Frequency")
-save_plot(fig, "plot4_hourly_rate.png")
+save_plot(fig, "Plot4.png")
 plt.show()
 
 # Plot 5: Project Size vs Employees
@@ -83,7 +83,7 @@ sns.countplot(x="Minimum Project Size", hue="Number of Employees", data=df)
 plt.title("Project Size vs Employee Count")
 plt.xlabel("Minimum Project Size")
 plt.ylabel("Count")
-save_plot(fig, "plot5_project_size.png")
+save_plot(fig, "Plot5.png")
 plt.show()
 
 # ------------------------------------------- Numpy Analysis ------------------------------------------------
